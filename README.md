@@ -34,11 +34,12 @@ From now on, **we assume you are inside the directory**
 Run
 ---
 
-After building run the verifier with
+After building, run the verifier with
 
     $ stack exec horn -- tests/pos/skip.js  
 
 If all went well you should see something like
+    
     horn
     hornConfig {files = ["tests/pos/skip.js"]}
 
@@ -67,7 +68,7 @@ To run all negative tests, you can write:
 
     $ stack exec horn -- tests/neg/*
 
-Positive tests should give you "Verification: passed"; negative tests should show "Verification: failed".
+Positive tests should give you `Verification: passed`; negative tests should show `Verification: failed`.
 
 Writing Specifications
 ----------------------

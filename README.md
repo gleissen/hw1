@@ -32,7 +32,8 @@ You can build and run the verifier with
 
     $ stack run -- tests/pos/skip.js
 
-If all went well you should see something like:
+Here, `tests/pos/skip.js` specifies the file we want to verify. If all went well
+you should see something like:
 
     horn
     hornConfig {files = ["tests/pos/skip.js"]}

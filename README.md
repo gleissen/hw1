@@ -123,7 +123,7 @@ File **VCGen.hs** implements verification condition generation based on weakest 
 
 You have to fill in function **generateStmtVC**. **generateStmtVC** returns the
 weakest precondition for the given statement, however, it keeps as additional
-state a list of vcs "VCState", which contains verification conditions on
+state a list of vcs `VCState`, which contains verification conditions on
 invariants. You can use functions **getVCs** and **addVCs** to access this
 state.
 

@@ -24,18 +24,18 @@ data Exp = Var String
 data BExp = Bool Bool
               | And BExp BExp
               | Or BExp BExp
-              | Lte Exp Exp
-              | Gte Exp Exp 
-              | Eq Exp Exp 
-              | Neq Exp Exp deriving (Show)
+              | Lte Exp Exp                 -- less than or equal
+              | Gte Exp Exp                 -- greater than or equal
+              | Eq Exp Exp                  -- equal
+              | Neq Exp Exp deriving (Show) -- not equal
 
 data Stmt = Skip
-              | Assign String Exp
-              | Seq Stmt Stmt
-              | SeqList [Stmt]
-              | If BExp Stmt Stmt
-              | While L.Base BExp Stmt 
-              | Assume L.Base
+              | Assign String Exp         -- x := e
+              | Seq Stmt Stmt             -- s1;s2
+              | SeqList [Stmt]            -- [s1,s2,...]
+              | If BExp Stmt Stmt         -- if b s1 s2
+              | While L.Base BExp Stmt    -- while [inv] b s
+              | Assume L.Base             
               | Assert L.Base deriving (Show)
 
 
@@ -223,12 +223,12 @@ toNanoExp (IntLit _ n)  = error "TODO: FILL THIS IN"
 ------------------------------------------
 toNanoStmt :: Statement a -> Stmt
 ------------------------------------------
+toNanoStmt _ = error "TODO: FILL THIS IN"
+
 toNanoStmt s 
   | isAssume s = Assume $ fromJust $ getAssume s
   | isAssert s = Assert $ fromJust $ getAssert s
   | isInv s    = Skip
-
-toNanoStmt _ = error "TODO: FILL THIS IN"
 
 ---------------------------------------------------------------------
 mkNano :: [Statement SourcePos] -> Maybe [Stmt]

@@ -8,14 +8,13 @@ We will work with programs that are written in a subset ECMAScript and translate
 
 Requirements
 ------------
-
--- Install Microsoft's Z3 SMT solver
+Install Microsoft's Z3 SMT solver
 
 - Linux: https://www.howtoinstall.me/ubuntu/18-04/z3/
 - MacOs: https://formulae.brew.sh/formula/z3
 - Binaries: https://github.com/Z3Prover/z3/releases
 
--- Install Haskell/GHC and stack
+Install Haskell/GHC and stack
 
 - Follow the installation instructions on https://docs.haskellstack.org/en/stable/README/
 

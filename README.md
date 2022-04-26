@@ -179,4 +179,4 @@ versions adhere to the above requirement.)
 ## Part C: Add New Test-cases
 
 Your final assignment is to add 3 new positive test-cases to the folder `tests/pos-new`.
-The new test-cases should require non-trivial invariants.
+The new test-cases should require non-trivial invariants and pass verification.

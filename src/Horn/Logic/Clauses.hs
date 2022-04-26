@@ -16,15 +16,15 @@ data Exp =   Var String
             | Times [Exp]
             deriving (Eq,Ord)
 
-data Base =   Tr
-            | Fl
-            | Eq Exp Exp
-            | Geq Exp Exp
-            | Leq Exp Exp
-            | Neg Base
-            | And [Base]
-            | Or  [Base]
-            | Implies Base Base
+data Base =   Tr                -- true
+            | Fl                -- false
+            | Eq Exp Exp        -- e1 = e2
+            | Geq Exp Exp       -- e1 >= e2
+            | Leq Exp Exp       -- e1 =< e2
+            | Neg Base          -- not e
+            | And [Base]        -- /\ [e1, e2, ...]
+            | Or  [Base]        -- \/ [e1, e2, ...]
+            | Implies Base Base -- F1 => F2
             deriving (Eq,Ord)
 
 type Var = Exp

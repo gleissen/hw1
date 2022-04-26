@@ -17,8 +17,6 @@ type VCM = StateT VCState IO
 -----------------------------------------------------------------------------------
 generateStmtVC :: Nano.Stmt -> Logic.Base -> VCM Logic.Base 
 -----------------------------------------------------------------------------------
-generateStmtVC _ _ = error "TODO: FILL THIS IN"
-              
 generateStmtVC (Nano.Assume phi) post = do
               let pre = Logic.Implies phi post
               return pre
@@ -26,6 +24,8 @@ generateStmtVC (Nano.Assume phi) post = do
 generateStmtVC (Nano.Assert phi) post = do
               let pre = Logic.And [post, phi]
               return pre              
+
+generateStmtVC _ _ = error "TODO: FILL THIS IN"
 
 -------------------------------------------------------------------
 isValid :: Logic.Base -> IO Bool

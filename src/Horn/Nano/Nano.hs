@@ -1,6 +1,6 @@
 {-# LANGUAGE DeriveDataTypeable     #-}
 {-# LANGUAGE FlexibleInstances      #-}
-
+{-# OPTIONS_GHC -Wno-deprecations #-}
 module Horn.Nano.Nano where
 
 import qualified Horn.Logic.Clauses as L
@@ -223,13 +223,12 @@ toNanoExp (IntLit _ n)  = error "TODO: FILL THIS IN"
 ------------------------------------------
 toNanoStmt :: Statement a -> Stmt
 ------------------------------------------
-toNanoStmt _ = error "TODO: FILL THIS IN"
-
 toNanoStmt s 
   | isAssume s = Assume $ fromJust $ getAssume s
   | isAssert s = Assert $ fromJust $ getAssert s
   | isInv s    = Skip
 
+toNanoStmt _ = error "TODO: FILL THIS IN"
 
 ---------------------------------------------------------------------
 mkNano :: [Statement SourcePos] -> Maybe [Stmt]
@@ -307,7 +306,6 @@ data Config = Config {
 -- ---------------------------------------------------------------------
 -- -- | Top-level Parser 
 -- ---------------------------------------------------------------------
-
 parseNanoFromFile f = 
   do  s <- parseJavaScriptFromFile f
       return $ fromMaybe err (mkNano s)

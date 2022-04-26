@@ -218,7 +218,7 @@ toNanoBexp _ = error "TODO: FILL THIS IN"
 ------------------------------------------
 toNanoExp :: Expression a -> Exp
 ------------------------------------------
-toNanoExp (IntLit _ n)  = error "TODO: FILL THIS IN"
+toNanoExp _  = error "TODO: FILL THIS IN"
 
 ------------------------------------------
 toNanoStmt :: Statement a -> Stmt

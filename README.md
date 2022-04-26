@@ -131,7 +131,7 @@ invariants. You can use functions **getVCs** and **addVCs** to access this
 state.
 
 **NOTE:**  You can **only** modify/extend the code in 
-the files mentioned above; there is no need to 
+the functions mentioned above; there is no need to 
 change any code elsewhere.
 
 ## Part B: Verifying A Small Suite of NanoJS Programs

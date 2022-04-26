@@ -23,7 +23,11 @@ Install
 
 Make sure your machine has the above **requirements**.
 
-After that, just clone the directory, and you're good to go!
+After that, just clone the directory using 
+
+    https://github.com/gleissen/hw1.git
+    
+and you're good to go!
 
 Run
 ---

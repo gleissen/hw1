@@ -23,22 +23,17 @@ Install
 
 Make sure your machine has the above **requirements**.
 
-From now on, **we assume you are inside the directory**
-
-    hw1/horn
-
-**Installing** To build our verifier, run the following commands
-
-    stack build
+After that, just clone the directory, and you're good to go!
 
 Run
 ---
 
 After building run the verifier with
 
-    $ stack exec horn -- tests/pos/skip.js  
+    $ stack run -- tests/pos/skip.js
 
-If all went well you should see something like
+If all went well you should see something like:
+
     horn
     hornConfig {files = ["tests/pos/skip.js"]}
 
@@ -59,13 +54,19 @@ should see something like:
 Running All Tests
 -----------------
 
+You can provide any number of files to the verifier. To run a specifc test, write:
+
+    $ stack run -- path/to/file.js
+
+All tests can be found within the `tests` directory.
+
 To run all the positive tests you can write:
 
-    $ stack exec horn -- tests/pos/*
+    $ stack run -- tests/pos/*
 
 To run all negative tests, you can write:
 
-    $ stack exec horn -- tests/neg/*
+    $ stack run -- tests/neg/*
 
 Positive tests should give you "Verification: passed"; negative tests should show "Verification: failed".
 
@@ -105,9 +106,7 @@ In **Nano.hs**, you have to complete functions
     - toNanoExp
     - toNanoStmt
 
-These functions translate programs written in ECMAScript (that is, our examples in tests/pos, tests/neg) into Nano, as defined in this file. The programs are already parsed and in the data-format define in this documentation:
-
-    https://hackage.haskell.org/package/language-ecmascript-0.17.0.1/docs/Language-ECMAScript3-Syntax.html
+These functions translate programs written in ECMAScript (that is, our examples in tests/pos, tests/neg) into Nano, as defined in this file. The programs are already parsed and in the data-format define in [this documentation](https://hackage.haskell.org/package/language-ecmascript-0.17.0.1/docs/Language-ECMAScript3-Syntax.html).
 
 To transform While-loops, you can use function **getInvariant s** which extracts invariants specified in the loop body.
 
@@ -146,7 +145,7 @@ Instead of Hoare-triples, Nano contains statements `assume` and `assert`.
 obligation to show that formula F holds. In particular a Hoare triple {P} s {Q}
 can be translated into 
 
-        assume(P); s; assert(Q)
+    assume(P); s; assert(Q)
 
 As we did not discuss these concepts in class yet, the implementation for these statements is provided.
 
@@ -174,7 +173,7 @@ do *not* pass verification.
 
 **NOTE:** You can **only** write specification annotations of the form 
 
-            invariant(p)
+    invariant(p)
 
 That is, you **cannot** add, remove or modify **any** other lines. 
 (Of course, when **debugging** your specifications, you can make 

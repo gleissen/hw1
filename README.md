@@ -28,7 +28,7 @@ After that, just clone the directory, and you're good to go!
 Run
 ---
 
-After building run the verifier with
+After building, run the verifier with
 
     $ stack run -- tests/pos/skip.js
 
@@ -68,7 +68,7 @@ To run all negative tests, you can write:
 
     $ stack run -- tests/neg/*
 
-Positive tests should give you "Verification: passed"; negative tests should show "Verification: failed".
+Positive tests should give you `Verification: passed`; negative tests should show `Verification: failed`.
 
 Writing Specifications
 ----------------------
@@ -121,7 +121,7 @@ File **VCGen.hs** implements verification condition generation based on weakest 
 
 You have to fill in function **generateStmtVC**. **generateStmtVC** returns the
 weakest precondition for the given statement, however, it keeps as additional
-state a list of vcs "VCState", which contains verification conditions on
+state a list of vcs `VCState`, which contains verification conditions on
 invariants. You can use functions **getVCs** and **addVCs** to access this
 state.
 
@@ -149,11 +149,6 @@ can be translated into
 
 As we did not discuss these concepts in class yet, the implementation for these statements is provided.
 
-when verifying the files in 
-   
-    tests/pos/*.js
-
-
 **Tip** Instead of writing 
 
     invariant(P && Q && R);
@@ -164,8 +159,7 @@ you can write
     invariant(Q);
     invariant(R);
 
-
-To make sure that your implementation is correct, also make sure that 
+To make sure that your implementation is correct, you also need to make sure that 
 
 tests/neg/*.js
 
@@ -183,4 +177,4 @@ versions adhere to the above requirement.)
 ## Part C: Add New Test-cases
 
 Your final assignment is to add 3 new positive test-cases to the folder `tests/pos-new`.
-The new test-cases should require non-trivial invariants.
+The new test-cases should require non-trivial invariants and pass verification.

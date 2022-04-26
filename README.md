@@ -23,16 +23,21 @@ Install
 
 Make sure your machine has the above **requirements**.
 
-After that, just clone the directory, and you're good to go!
+After that, just clone the directory using 
+
+    git clone https://github.com/gleissen/hw1.git
+
+and you're good to go!
 
 Run
 ---
 
-After building, run the verifier with
+You can build and run the verifier with
 
     $ stack run -- tests/pos/skip.js
 
-If all went well you should see something like:
+Here, `tests/pos/skip.js` specifies the file we want to verify. If all went well
+you should see something like:
 
     horn
     hornConfig {files = ["tests/pos/skip.js"]}
@@ -106,7 +111,7 @@ In **Nano.hs**, you have to complete functions
     - toNanoExp
     - toNanoStmt
 
-These functions translate programs written in ECMAScript (that is, our examples in tests/pos, tests/neg) into Nano, as defined in this file. The programs are already parsed and in the data-format define in [this documentation](https://hackage.haskell.org/package/language-ecmascript-0.17.0.1/docs/Language-ECMAScript3-Syntax.html).
+These functions translate programs written in ECMAScript (that is, our examples in tests/pos, tests/neg) into Nano, as defined in this file. The programs are already parsed and in the data-format defined in [this documentation](https://hackage.haskell.org/package/language-ecmascript-0.17.0.1/docs/Language-ECMAScript3-Syntax.html).
 
 To transform While-loops, you can use function **getInvariant s** which extracts invariants specified in the loop body.
 
@@ -126,7 +131,7 @@ invariants. You can use functions **getVCs** and **addVCs** to access this
 state.
 
 **NOTE:**  You can **only** modify/extend the code in 
-the files mentioned above; there is no need to 
+the functions mentioned above; there is no need to 
 change any code elsewhere.
 
 ## Part B: Verifying A Small Suite of NanoJS Programs
@@ -161,7 +166,7 @@ you can write
 
 To make sure that your implementation is correct, you also need to make sure that 
 
-tests/neg/*.js
+    tests/neg/*.js
 
 do *not* pass verification.
 

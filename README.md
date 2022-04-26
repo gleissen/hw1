@@ -151,11 +151,6 @@ can be translated into
 
 As we did not discuss these concepts in class yet, the implementation for these statements is provided.
 
-when verifying the files in 
-   
-    tests/pos/*.js
-
-
 **Tip** Instead of writing 
 
     invariant(P && Q && R);
@@ -166,8 +161,7 @@ you can write
     invariant(Q);
     invariant(R);
 
-
-To make sure that your implementation is correct, also make sure that 
+To make sure that your implementation is correct, you also need to make sure that 
 
 tests/neg/*.js
 

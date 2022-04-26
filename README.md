@@ -162,7 +162,7 @@ you can write
 
 To make sure that your implementation is correct, you also need to make sure that 
 
-tests/neg/*.js
+    tests/neg/*.js
 
 do *not* pass verification.
 

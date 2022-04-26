@@ -28,7 +28,7 @@ After that, just clone the directory, and you're good to go!
 Run
 ---
 
-After building, run the verifier with
+You can build and run the verifier with
 
     $ stack run -- tests/pos/skip.js
 

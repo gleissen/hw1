@@ -130,6 +130,10 @@ state a list of vcs `VCState`, which contains verification conditions on
 invariants. You can use functions **getVCs** and **addVCs** to access this
 state.
 
+**TIP:** If you don't know what a function in the existing code does, you can
+look it up on Hoogle: (https://hoogle.haskell.org/). Hoogle will give you its
+type and a link to the documentation.
+
 **NOTE:**  You can **only** modify/extend the code in 
 the functions mentioned above; there is no need to 
 change any code elsewhere.

@@ -90,9 +90,9 @@ You need to do three things to complete the assignment.
 Fill in the implementation of VC generation by
 completing the relevant implementations in:
 
-    - hw1/horn/Logic/Clauses.hs
-    - hw1/horn/Horn/Nano/Nano.hs
-    - hw1/horn/Horn/VCGen/VCGen.hs
+    - hw1/src/Horn/Logic/Clauses.hs
+    - hw1/src/Horn/Nano/Nano.hs
+    - hw1/src/Horn/VCGen/VCGen.hs
 
 in particular, wherever it says:
 

@@ -111,7 +111,7 @@ In **Nano.hs**, you have to complete functions
     - toNanoExp
     - toNanoStmt
 
-These functions translate programs written in ECMAScript (that is, our examples in tests/pos, tests/neg) into Nano, as defined in this file. The programs are already parsed and in the data-format defined in [this documentation](https://hackage.haskell.org/package/language-ecmascript-0.17.0.1/docs/Language-ECMAScript3-Syntax.html).
+These functions translate programs written in ECMAScript (that is, our examples in `tests/pos`, `tests/neg`) into Nano, as defined in this file. The programs are already parsed and in the data-format defined in [this documentation](https://hackage.haskell.org/package/language-ecmascript-0.17.0.1/docs/Language-ECMAScript3-Syntax.html).
 
 To transform While-loops, you can use function **getInvariant s** which extracts invariants specified in the loop body.
 

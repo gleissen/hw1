@@ -75,10 +75,6 @@ get_vars_exp (Plus es)  = Set.unions $ map get_vars_exp es
 get_vars_exp (Minus es) = Set.unions $ map get_vars_exp es
 get_vars_exp (Times es) = Set.unions $ map get_vars_exp es
 
-----------------------------------------
-substVars :: [Var] -> [Var] -> Base ->  Base
-----------------------------------------
-substVars vs' vs phi = foldl ((flip.uncurry) subst) phi (zip vs' vs)
 
 -- subst phi y x = phi[y/x]
 -------------------------------------

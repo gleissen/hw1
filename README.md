@@ -43,7 +43,7 @@ you should see something like:
     hornConfig {files = ["tests/pos/skip.js"]}
 
     Checking the file : "tests/pos/skip.js"
-    horn: TODO: Please Implement!
+    horn: TODO: FILL THIS IN!
     CallStack (from HasCallStack):
 
 After filling in the right code you

@@ -76,12 +76,13 @@ get_vars_exp (Minus es) = Set.unions $ map get_vars_exp es
 get_vars_exp (Times es) = Set.unions $ map get_vars_exp es
 
 
--- subst phi y x = phi[y/x]
+-- subst e1 x e2 = f[e1/x]
 -------------------------------------
 subst :: Exp -> Var -> Base ->  Base
 -------------------------------------
-subst  y x f = error "TODO: FILL THIS IN"
+subst  e1 x f = error "TODO: FILL THIS IN"
 
+-- subst e1 x e2 = e2[e1/x]
 ---------------------------------------
 subst_exp :: Exp -> Var -> Exp ->  Exp
 ---------------------------------------

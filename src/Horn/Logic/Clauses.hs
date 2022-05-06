@@ -76,7 +76,7 @@ get_vars_exp (Minus es) = Set.unions $ map get_vars_exp es
 get_vars_exp (Times es) = Set.unions $ map get_vars_exp es
 
 
--- subst e1 x e2 = f[e1/x]
+-- subst e1 x f = f[e1/x]
 -------------------------------------
 subst :: Exp -> Var -> Base ->  Base
 -------------------------------------

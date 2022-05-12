@@ -85,7 +85,7 @@ Assignment
 
 You need to do three things to complete the assignment.
 
-## Part A: Verification Condition Generation
+## Part A: Verification Condition Generation (6 pts)
 
 Fill in the implementation of VC generation by
 completing the relevant implementations in:
@@ -98,14 +98,14 @@ in particular, wherever it says:
 
     error "TODO: FILL THIS IN"
 
-In **Clauses.hs** you have to complete functions
+In **Clauses.hs** you have to complete functions (1 pt)
 
     - subst
     - subst_exp
 
 which implement substitution, as defined in class; These functions will be useful for implementing the VCGen rule for assignements.
 
-In **Nano.hs**, you have to complete functions
+In **Nano.hs**, you have to complete functions (2 pt)
 
     - toNanoBexp
     - toNanoExp
@@ -116,19 +116,19 @@ You can take a look at the definition of `isNano`, which defines the subset of E
 
 To transform While-loops, you can use function **getInvariant s** which extracts invariants specified in the loop body.
 
-You also have to complete functions
+You also have to complete functions (1 pt)
 
     - expToBase
     - bexpToBase
 
 which translate program expressions into logic, as define in file `Logic/Clauses.hs`.
 
-File **VCGen.hs** implements verification condition generation based on weakest preconditions, as discussed in class.
+File **VCGen.hs** implements verification condition generation based on weakest preconditions, as discussed in class. 
 
-You have to fill in function **generateStmtVC**. **generateStmtVC** returns the
-weakest precondition for the given statement, however, it keeps as additional
-state a list of vcs `VCState`, which contains verification conditions on
-invariants. You can use functions **getVCs** and **addVCs** to access this
+You have to fill in function **generateStmtVC** (2 pt). **generateStmtVC**
+returns the weakest precondition for the given statement, however, it keeps as
+additional state a list of vcs `VCState`, which contains verification conditions
+on invariants. You can use functions **getVCs** and **addVCs** to access this
 state.
 
 **TIP:** If you don't know what a function in the existing code does, you can
@@ -139,7 +139,7 @@ type and a link to the documentation.
 the functions mentioned above; there is no need to 
 change any code elsewhere.
 
-## Part B: Verifying A Small Suite of NanoJS Programs
+## Part B: Verifying A Small Suite of NanoJS Programs (3 pts)
 
 Next, use your implementation to **verify** the suite of programs in
 
@@ -184,7 +184,7 @@ That is, you **cannot** add, remove or modify **any** other lines.
 whatever modifications you like; we just require that the **final** 
 versions adhere to the above requirement.) 
 
-## Part C: Add New Test-cases
+## Part C: Add New Test-cases (1 pt)
 
 Your final assignment is to add 3 new positive test-cases to the folder `tests/pos-new`.
 The new test-cases should require non-trivial invariants and pass verification.

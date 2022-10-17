@@ -46,6 +46,7 @@ test-suite horn-test
       ClausesSpec
       NanoSpec
       VCGenSpec
+      VerificationSpec
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wno-type-defaults -Wno-redundant-constraints -Wno-unused-imports -threaded -rtsopts -with-rtsopts=-N

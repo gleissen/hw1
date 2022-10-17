@@ -12,6 +12,7 @@ import Data.Maybe (isJust)
 import qualified ClausesSpec
 import qualified NanoSpec
 import qualified VCGenSpec
+import qualified VerificationSpec
 
 rubric :: Rubric
 rubric = do
@@ -19,11 +20,7 @@ rubric = do
     criterion "Clauses" (1/6) ClausesSpec.rubric
     criterion "Nano"    (3/6) NanoSpec.rubric
     criterion "VCGen"   (2/6) VCGenSpec.rubric
-  criterion "Verification" (4/10) $ do
-    criterion "Invariant" (3/4) (passes "stub" 1 $ True @?= True)
-    criterion "New"       (1/4) (passes "stub" 1 $ True @?= True)
---    criterion "Invariant" (3/4) InvariantSpec.rubric
---    criterion "New"       (1/4) NewSpec.rubric
+  criterion "Verification" (4/10) VerificationSpec.rubric
 
 -- Output the weight as grade
 output :: Float -> IO ()

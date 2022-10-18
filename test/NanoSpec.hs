@@ -245,7 +245,7 @@ rubric = do
                 (Assign "x" (Plus (Var "x") (Num 1)))
         ]
 
-      -- This last check is a simple check to check whether
+      -- This last test checks whether
       -- invariants are passed to the while
       let normWhile (While i b s) = While i b (normalize s)
           normWhile s             = s

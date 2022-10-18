@@ -27,7 +27,7 @@ data BExp = Bool Bool
               | Lte Exp Exp                 -- less than or equal
               | Gte Exp Exp                 -- greater than or equal
               | Eq Exp Exp                  -- equal
-              | Neq Exp Exp deriving (Show) -- not equal
+              | Neq Exp Exp deriving (Show, Eq) -- not equal
 
 data Stmt = Skip
               | Assign String Exp         -- x := e
@@ -36,7 +36,7 @@ data Stmt = Skip
               | If BExp Stmt Stmt         -- if b s1 s2
               | While L.Base BExp Stmt    -- while [inv] b s
               | Assume L.Base             
-              | Assert L.Base deriving (Show)
+              | Assert L.Base deriving (Show, Eq)
 
 
 

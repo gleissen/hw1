@@ -1,3 +1,5 @@
+{-# LANGUAGE StandaloneDeriving #-}
+
 module VerificationSpec
   ( rubric
   ) where
@@ -13,6 +15,9 @@ import Control.Monad
 import Horn.Nano.Nano
 import qualified Horn.Logic.Clauses as Logic
 import qualified Horn.VCGen.VCGen as VCGen
+
+deriving instance Eq BExp
+deriving instance Eq Stmt
 
 pos :: [String]
 pos =

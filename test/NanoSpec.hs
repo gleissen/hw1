@@ -1,3 +1,5 @@
+{-# LANGUAGE StandaloneDeriving #-}
+
 module NanoSpec
   ( rubric
   ) where
@@ -12,6 +14,9 @@ import Horn.Nano.Nano
 import qualified Horn.Logic.Clauses as L
 import Language.ECMAScript3.Parser (parse, expression, statement, program)
 import Language.ECMAScript3 (Statement, unJavaScript)
+
+deriving instance Eq BExp
+deriving instance Eq Stmt
 
 rubric :: Rubric
 rubric = do

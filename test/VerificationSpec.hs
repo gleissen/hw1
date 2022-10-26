@@ -21,7 +21,8 @@ deriving instance Eq Stmt
 
 pos :: [String]
 pos =
-  [ "tests/pos/locks-loops.js"
+  [ "tests/pos/driver.js"
+  , "tests/pos/locks-loops.js"
   , "tests/pos/sum.js"
   , "tests/pos/sum2.js"
   , "tests/pos/twoloops.js"

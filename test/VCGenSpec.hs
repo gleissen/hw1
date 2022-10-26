@@ -15,6 +15,7 @@ import qualified Horn.VCGen.VCGen as VCGen
 pos :: [String]
 pos =
   [ "tests/pos/abs.js"
+--, "tests/pos/driver.js"
   , "tests/pos/ifassert.js"
   , "tests/pos/inc.js"
   , "tests/pos/inc0.js"

@@ -14,6 +14,11 @@ Install Microsoft's Z3 SMT solver
 - MacOs: https://formulae.brew.sh/formula/z3
 - Binaries: https://github.com/Z3Prover/z3/releases
 
+Or open terminal and do this:
+
+    apt install z3
+    apt install libz3-dev libtinfo-dev
+
 Install Haskell/GHC and stack
 
 - Follow the installation instructions on https://docs.haskellstack.org/en/stable/README/
